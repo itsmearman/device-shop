@@ -23,6 +23,7 @@ export default function Navbar() {
             God Blog
           </Typography>
           <Button color="inherit" href={"/login"}>Login</Button>
+          <Button color="inherit" href={"/product"}>products</Button>
         </Toolbar>
       </AppBar>
     </Box>
