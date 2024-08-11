@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-// import { Container, TextField, Button, CssBaseline, Typography, Box } from '@mui/material';
+import { Container, TextField, Button, CssBaseline, Typography, Box } from '@mui/material';
 
 type Event = {
   [key: string]: any
@@ -42,7 +42,55 @@ const Login = () => {
   };
   
   return (
-    <div>nothing</div>
+    
+  <Container component="main" maxWidth="xs">
+  <CssBaseline />
+  <Box
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 8
+    }}
+  >
+    <Typography component="h1" variant="h5">
+      Login
+    </Typography>
+    {error && <Typography color="error">{error}</Typography>}
+    <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+      <TextField
+        margin="normal"
+        required
+        fullWidth
+        label="Email Address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        autoComplete="email"
+        autoFocus
+        />
+      <TextField
+        margin="normal"
+        required
+        fullWidth
+        label="Password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        autoComplete="current-password"
+        />
+      <Button
+        type="submit"
+        fullWidth
+        variant="contained"
+        sx={{ mt: 3, mb: 2 }}
+        >
+        Login
+      </Button>
+    </Box>
+  </Box>
+</Container>
+
     );
   };
 
