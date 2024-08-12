@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -20,7 +21,9 @@ export default function Navbar() {
 
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Link href={"/"}>
             God Blog
+          </Link>
           </Typography>
           <Button color="inherit" href={"/login"}>Login</Button>
           <Button color="inherit" href={"/product"}>products</Button>

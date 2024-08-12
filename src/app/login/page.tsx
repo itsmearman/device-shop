@@ -19,17 +19,17 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   
-  useEffect(() => {
-    const fetchUser = async () => {
-      const dataf = await fetch("https://dummyjson.com/users");
-      const data = await dataf.json();
-      setUser(data);
-    };
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     const dataf = await fetch("https://dummyjson.com/users");
+  //     const data = await dataf.json();
+  //     setUser(data);
+  //   };
     
-    fetchUser();
-  }, []);
+  //   fetchUser();
+  // }, []);
 
-  console.log(user);
+  // console.log(user);
   
   const handleSubmit = (event: Event) => {
     
