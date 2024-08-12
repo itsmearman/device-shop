@@ -1,6 +1,8 @@
 {
-  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/login/page": "app/login/page.js",
-  "/product/page": "app/product/page.js",
-  "/product/[...slug]/page": "app/product/[...slug]/page.js"
+  "/phones/page": "app/phones/page.js",
+  "/watchs/page": "app/watchs/page.js",
+  "/watchs/[...slug]/page": "app/watchs/[...slug]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

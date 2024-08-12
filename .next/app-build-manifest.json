@@ -16,15 +16,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/login/page.js"
     ],
-    "/product/page": [
+    "/phones/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/product/page.js"
+      "static/chunks/app/phones/page.js"
     ],
-    "/product/[...slug]/page": [
+    "/phones/[...slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/product/[...slug]/page.js"
+      "static/chunks/app/phones/[...slug]/page.js"
+    ],
+    "/watchs/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/watchs/page.js"
+    ],
+    "/watchs/[...slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/watchs/[...slug]/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

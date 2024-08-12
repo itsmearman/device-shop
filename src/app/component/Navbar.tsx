@@ -26,7 +26,8 @@ export default function Navbar() {
           </Link>
           </Typography>
           <Button color="inherit" href={"/login"}>Login</Button>
-          <Button color="inherit" href={"/product"}>products</Button>
+          <Button color="inherit" href={"/phones"}>phones</Button>
+          <Button color="inherit" href={"/watchs"}>watchs</Button>
         </Toolbar>
       </AppBar>
     </Box>
