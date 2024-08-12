@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 export default function ProdDetail() {
-    const params = useParams<{ slug: string }>()
+    const params = useParams<{ slug: string }>();
 
     type ProdProps = {
         _id: number;
@@ -14,9 +14,10 @@ export default function ProdDetail() {
         category: string;
         image: string;
         brand: string;
-    }
+    };
 
-    const [product, setProduct] = useState<ProdProps >([]);
+    const [product, setProduct] = useState<ProdProps | null>(null);
+
     useEffect(() => {
         const fetchProduct = async () => {
             const response = await fetch(`https://jsonserver.reactbd.com/phone/${params.slug}`);
@@ -24,16 +25,20 @@ export default function ProdDetail() {
             setProduct(data);
         };
         fetchProduct();
-    }, []);
-    // console.log(product.title);
-    return (<div>
-        <img src={product.image} alt={product.title} />
-        <div>
-            <div className='px-2 p-2'>
-                {product.description}
+    }, [params.slug]);
+
+    if (!product) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        <div className='h-dvh flex'>
+            <img className='w-2/5 mt-2' src={product.image} alt={product.title} />
+            <div>
+                <div className='text-xl font-bold flex min-h-screen items-center justify-center absolute w-3/5'>
+                    {product.description}
+                </div>
             </div>
         </div>
-
-    </div>
-    )
+    );
 }
